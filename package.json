@@ -1,0 +1,41 @@
+{
+  "name": "cicleci-youtube",
+  "version": "1.0.0",
+  "description": "cicleci-youtube",
+  "main": "server.js",
+  "directories": {
+    "test": "__test__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonatas-melo-silva/cicleci-youtube.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonatas-melo-silva/cicleci-youtube/issues"
+  },
+  "homepage": "https://github.com/jonatas-melo-silva/cicleci-youtube#readme",
+  "scripts": {
+    "test": "jest",
+    "build": "sucrase ./src -d ./build --transforms imports",
+    "dev": "nodemon --exec sucrase-node src/server.js --ignore __tests__",
+    "start": "node build/server.js"
+  },
+  "jest": {
+    "transform": {
+      ".(js|jsx|ts|tsx)": "@sucrase/jest-plugin"
+    }
+  },
+  "devDependencies": {
+    "@sucrase/jest-plugin": "^2.1.0",
+    "jest": "^25.3.0",
+    "nodemon": "^2.0.12",
+    "sucrase": "^3.20.0"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.24",
+    "express": "^4.17.1"
+  }
+}
