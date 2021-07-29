@@ -10,6 +10,6 @@
 import Product from '../model/product'
 
 export default function sellProduct(product=Product, amount=0) {
-  product.stock -= 1;
+  product.stock -= amount;
   return product;
 }
