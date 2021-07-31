@@ -20,8 +20,8 @@
   "scripts": {
     "test": "jest",
     "build": "sucrase ./src -d ./build --transforms imports",
-    "dev": "nodemon --exec sucrase-node src/server.js --ignore __tests__",
-    "start": "node build/server.js"
+    "start": "node build/server.js",
+    "dev": "nodemon --exec sucrase-node src/server.js --ignore __tests__"
   },
   "jest": {
     "transform": {
@@ -32,10 +32,13 @@
     "@sucrase/jest-plugin": "^2.1.0",
     "jest": "^25.3.0",
     "nodemon": "^2.0.12",
-    "sucrase": "^3.20.0"
+    "sucrase": "^3.20.0",
+    "supertest": "^6.1.4"
   },
   "dependencies": {
     "@types/jest": "^26.0.24",
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "uuidv4": "^6.2.11"
   }
 }
