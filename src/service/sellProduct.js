@@ -7,9 +7,9 @@
  * @param {*} quantity
  */
 
-import Product from '../model/product'
+import Product from '../model/product';
 
-export default function sellProduct(product=Product, amount=0) {
+export default function sellProduct(product = Product, amount = 0) {
   product.stock -= amount;
   return product;
 }
